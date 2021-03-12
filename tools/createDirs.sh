@@ -10,9 +10,14 @@
 # How To Execute:
 #  - chmod +x <name of this file>
 #  - ./<name of this file>
+#  - "root path"
+# Parameters:
+#  1) The Path to the directory where create the files
 #
 
-for numday in {1..2}
+cd $1
+
+for numday in {1..100}
 do 
 
   tmpDirName="day${numday}"
