@@ -15,18 +15,22 @@
 #
 
 cd $1
+mkdir days
+cd days 
 
-for numday in {1..100}
-do 
+MAXLESSON=100
+numday=1; while [ $numday -lt $(($MAXLESSON+1)) ]; do
 
-  if [ numday -lt 10 ]; then
-    tmpDirName="day0${numday}"
+  if [ $numday -lt 10 ]; then
+    tmpDirName="0${numday}"
   else
-    tmpDirName="day${numday}"
+    tmpDirName="${numday}"
   fi
   mkdir "$tmpDirName"
   echo "Created the Directory: $tmpDirName"
   touch "$tmpDirName/LESSON${numday}.md"
+
+  numday=$(($numday +1))
 
 done
 
