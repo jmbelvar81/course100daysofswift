@@ -9,8 +9,7 @@
 # Last Update: 12/03/2021
 # How To Execute:
 #  - chmod +x <name of this file>
-#  - ./<name of this file>
-#  - "root path"
+#  - ./<name of this file> <"path where you want the files": e.g $(pwd)>
 # Parameters:
 #  1) The Path to the directory where create the files
 #
@@ -20,10 +19,13 @@ cd $1
 for numday in {1..100}
 do 
 
-  tmpDirName="day${numday}"
+  if [ numday -lt 10 ]; then
+    tmpDirName="day0${numday}"
+  else
+    tmpDirName="day${numday}"
+  fi
   mkdir "$tmpDirName"
   echo "Created the Directory: $tmpDirName"
-
   touch "$tmpDirName/LESSON${numday}.md"
 
 done
