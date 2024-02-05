@@ -26,6 +26,13 @@ Every directory under the **"days"** folder contains the notes corresponding to 
 
 ## **INSTALL SWIFT**
 
+- On WSL (only useful for non SwiftUI lessons): [install_swift_repl_in_wsl](docs/install_swift_on_WSL.md)
+
+- On MacOS: Install directly from *AppStore* installing *XCode* 
+
+- On Linux: Follow the steps indicated for WSL , only the same Ubuntu version listed there is tested
+
+
 ## **TOOLs**
 
 This repository contains a folder with several useful utilities, mainly oriented to organize the content when
